@@ -19,7 +19,7 @@ export default function AddCompany() {
       setMainSuccess([false, ""])
       setMainWarning([true, "Please fill all the fields!"])
     } else {
-      const send = await fetch("http://localhost:5000/admin/addCompany", {
+      const send = await fetch("https://cuvette-server.vercel.app/admin/addCompany", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -55,7 +55,7 @@ export default function AddCompany() {
 
       const formData = new FormData();
       formData.append('logo', e);
-      const send = await fetch("http://localhost:5000/admin/Companylogo", {
+      const send = await fetch("https://cuvette-server.vercel.app/admin/Companylogo", {
         method: "POST",
         mode: "cors",
         body: formData,
@@ -74,7 +74,7 @@ export default function AddCompany() {
   const uploadVDocs = async (e) => {
     const formData = new FormData();
     formData.append('verification', e);
-    const send = await fetch("http://localhost:5000/admin/Companyverificationdocs", {
+    const send = await fetch("https://cuvette-server.vercel.app/admin/Companyverificationdocs", {
       method: "POST",
       mode: "cors",
       body: formData,

@@ -17,7 +17,7 @@ export default function CompanyAdminLogin() {
     if (email == "" || password == "") {
       setAlert([true, "Please fill all the fields"]);
     } else {
-      const send = await fetch("http://localhost:5000/company/login", {
+      const send = await fetch("https://cuvette-server.vercel.app/company/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

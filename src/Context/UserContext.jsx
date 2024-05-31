@@ -14,7 +14,7 @@ const UserProvider = ({ children }) => {
 
     const check = async () => {
         try {
-            const getUser = await fetch("http://localhost:5000/user/protected", {
+            const getUser = await fetch("https://cuvette-server.vercel.app/user/protected", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

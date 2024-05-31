@@ -14,7 +14,7 @@ export default function Company() {
     const navigate = useNavigate()
     const [search, setsearch] = useState("")
     const all = async () => {
-        const getUser = await fetch("http://localhost:5000/user/jobs", {
+        const getUser = await fetch("https://cuvette-server.vercel.app/user/jobs", {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -26,7 +26,7 @@ export default function Company() {
     }
 
     const searchJobs = async (search) => {
-            const getUser = await fetch(`http://localhost:5000/user/job/search?search=${search}`, {
+            const getUser = await fetch(`https://cuvette-server.vercel.app/user/job/search?search=${search}`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",

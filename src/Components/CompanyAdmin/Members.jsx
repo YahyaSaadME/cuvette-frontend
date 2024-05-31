@@ -11,7 +11,7 @@ export default function Members() {
   const [openModal, setOpenModal] = useState([false, {}]);
   
   const all = async () => {
-    const send = await fetch("http://localhost:5000/company/members/all", {
+    const send = await fetch("https://cuvette-server.vercel.app/company/members/all", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -28,7 +28,7 @@ export default function Members() {
   }
 
   const check = async () => {
-    const getUser = await fetch("http://localhost:5000/company/protected", {
+    const getUser = await fetch("https://cuvette-server.vercel.app/company/protected", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -45,7 +45,7 @@ export default function Members() {
   };
 
   const add = async (userId) => {
-    const send = await fetch("http://localhost:5000/company/add", {
+    const send = await fetch("https://cuvette-server.vercel.app/company/add", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -61,7 +61,7 @@ export default function Members() {
   }
   const find_member = async (userId) => {
     console.log(userId);
-    const getUser = await fetch("http://localhost:5000/company/member/find", {
+    const getUser = await fetch("https://cuvette-server.vercel.app/company/member/find", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

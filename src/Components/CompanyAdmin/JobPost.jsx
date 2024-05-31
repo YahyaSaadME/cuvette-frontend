@@ -32,7 +32,7 @@ export default function JobPost() {
     const [openProfileModal, setopenProfileModal] = useState([false, {}])
     const [job_id, setjob_id] = useState("")
     const check = async () => {
-        const getUser = await fetch("http://localhost:5000/company/protected", {
+        const getUser = await fetch("https://cuvette-server.vercel.app/company/protected", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -90,7 +90,7 @@ export default function JobPost() {
                 setAlertInModal([true, 'red', 'Start Experience is greater that End'])
             } else {
 
-                const sendData = await fetch("http://localhost:5000/company/job/add", {
+                const sendData = await fetch("https://cuvette-server.vercel.app/company/job/add", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
@@ -108,7 +108,7 @@ export default function JobPost() {
         }
     }
     const profile = async (id, applicant_id) => {
-        const sendData = await fetch("http://localhost:5000/company/job/user", {
+        const sendData = await fetch("https://cuvette-server.vercel.app/company/job/user", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -126,7 +126,7 @@ export default function JobPost() {
         }
     }
     const selectCandidate = async (id, applied_id, status, applicant_id) => {
-        const sendData = await fetch("http://localhost:5000/company/job/select", {
+        const sendData = await fetch("https://cuvette-server.vercel.app/company/job/select", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

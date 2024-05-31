@@ -16,7 +16,7 @@ export default function JobView() {
 
 
   const find = async (q) => {
-    const getData = await fetch(`http://localhost:5000/user/job${q}`, {
+    const getData = await fetch(`https://cuvette-server.vercel.app/user/job${q}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -31,7 +31,7 @@ export default function JobView() {
 
   const apply = async () => {
     try {
-      const getData = await fetch(`http://localhost:5000/user/job/apply`, {
+      const getData = await fetch(`https://cuvette-server.vercel.app/user/job/apply`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

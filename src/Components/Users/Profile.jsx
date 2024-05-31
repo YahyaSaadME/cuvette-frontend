@@ -19,7 +19,7 @@ export default function Profile() {
 
   const update = async () => {
     try {
-      const getData = await fetch(`http://localhost:5000/user/profile/update`, {
+      const getData = await fetch(`https://cuvette-server.vercel.app/user/profile/update`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

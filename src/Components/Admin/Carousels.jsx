@@ -13,7 +13,7 @@ export default function Carousel() {
   const [Success, setSuccess] = useState([false, ""])
   const [opt, setopt] = useState(0)
   const load = async () => {
-    const send = await fetch("http://localhost:5000/admin/carousel_approval", {
+    const send = await fetch("https://cuvette-server.vercel.app/admin/carousel_approval", {
       method: "GET",
       mode: "cors",
     });
@@ -23,7 +23,7 @@ export default function Carousel() {
   };
 
   const accept = async (d) => {
-    const send = await fetch("http://localhost:5000/admin/approve_carousel", {
+    const send = await fetch("https://cuvette-server.vercel.app/admin/approve_carousel", {
       method: "POST",
       mode: "cors",
       headers: {
@@ -48,7 +48,7 @@ export default function Carousel() {
     }
   };
   const decline = async (cid, remove) => {
-    const send = await fetch("http://localhost:5000/admin/decline_carousel", {
+    const send = await fetch("https://cuvette-server.vercel.app/admin/decline_carousel", {
       method: "POST",
       mode: "cors",
       headers: {
@@ -69,7 +69,7 @@ export default function Carousel() {
 
   const change = async (option, proceed) => {
     try {
-      const req = await fetch('http://localhost:5000/admin/change_carousel', {
+      const req = await fetch('https://cuvette-server.vercel.app/admin/change_carousel', {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -144,7 +144,7 @@ export default function Carousel() {
                   {
                     openViewDocs[0] ? <div>
                       {
-                        openViewDocs[0] ? <img src={`http://localhost:5000/mycompany/carousel/${openViewDocs[1].img}`} width={"100%"} alt="" /> : ""
+                        openViewDocs[0] ? <img src={`https://cuvette-server.vercel.app/mycompany/carousel/${openViewDocs[1].img}`} width={"100%"} alt="" /> : ""
                       }
                       <p className="text-base leading-relaxed text-gray-800 text-justify mt-10">
                         {openViewDocs[1].content}

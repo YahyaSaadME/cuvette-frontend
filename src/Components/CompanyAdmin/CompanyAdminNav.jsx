@@ -29,7 +29,7 @@ export default function CompanyAdminNav() {
   };
 
   const check = async () => {
-    const getUser = await fetch("http://localhost:5000/company/protected", {
+    const getUser = await fetch("https://cuvette-server.vercel.app/company/protected", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

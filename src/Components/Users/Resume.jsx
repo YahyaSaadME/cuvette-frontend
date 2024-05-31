@@ -10,7 +10,7 @@ export default function Resume() {
 
     const add = async () => {
         try {
-            const getData = await fetch(`http://localhost:5000/user/profile/resume`, {
+            const getData = await fetch(`https://cuvette-server.vercel.app/user/profile/resume`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

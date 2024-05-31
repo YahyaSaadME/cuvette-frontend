@@ -25,7 +25,7 @@ export default function Signup() {
     } else {
       if (regex.test(password)) {
         if (password == cpassword) {
-          const send = await fetch("http://localhost:5000/user/signup", {
+          const send = await fetch("https://cuvette-server.vercel.app/user/signup", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
